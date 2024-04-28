@@ -1,0 +1,35 @@
+p {
+  margin: 0;
+}
+h3 {
+  margin: 0;
+}
+
+.card {
+  width: 300px;
+  border-radius: 60px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+.card img {
+  width: 100%;
+}
+.card .container_dati {
+  background-color: #fbf7e3;
+  padding: 2em;
+  text-align: center;
+}
+.card .container_dati .container_text {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.card .container_dati button {
+  width: 60%;
+  margin-top: 2em;
+  background-color: #f3df85;
+  border: none;
+  border-radius: 20px;
+  height: 3em;
+}

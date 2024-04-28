@@ -1,0 +1,83 @@
+body{
+    margin: 12px 0 0 0;
+}
+
+
+/************************** HEADER **************************/
+header{
+    text-align: center;
+}
+#logo{
+    height: 3.8em;
+}
+#container_sottotitolo{
+    background-color: beige;
+    margin-top: 20px;
+    border-top: 2px solid rgb(159, 130, 0);
+}
+#container_sottotitolo p{
+    margin: 0;
+    font-size: 0.8em;
+    line-height: 4em;
+    color: blue;
+}
+div span{
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+/************************** MAIN **************************/
+main{
+    width: 1024px;
+    margin: 0 auto;
+}
+#titolo{
+    text-align: center;
+    margin-top: 30px;
+}
+figure{
+    margin: 0;
+}
+figure img{
+    width: 100%;
+    border-radius: 15px;
+}
+figcaption{
+    text-align: center;
+    color: grey;
+    font-size: 0.9em;
+}
+figcaption p{
+    margin: 7px 0 10px 0;
+}
+
+#did{
+    border-left: 2px solid rgb(159, 130, 0);
+}
+#p1{
+    margin-bottom: 0;
+    color: red;
+}
+#p2{
+    margin-top: 0;
+    color: blue;
+    text-decoration: underline;
+}
+#p1, #p2{
+    margin-left: 10px;
+}
+
+#ingr{
+    margin-top: 62px;
+}
+.sotto_par{
+    border-bottom: 2px solid aquamarine;
+}
+
+li{
+    margin-bottom: 20px;
+}
+.passi span{
+    color: blue;
+    text-decoration: underline;
+}

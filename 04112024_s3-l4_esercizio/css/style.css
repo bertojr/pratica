@@ -1,0 +1,55 @@
+#container{
+    text-align: center;
+}
+#tabellone{
+    width: 70%;
+    margin: 0 auto;
+    margin-bottom: 50px;
+}
+#btn_genera, #btn_genera_cartella{
+    border: none;
+    font-size: 1.2rem;
+    height: 2.6rem;
+    background-color: burlywood;
+    border-radius: 8px;
+    box-shadow: 6px 10px 15px black;
+    margin-bottom: 40px;
+}
+#btn_genera:hover, #btn_genera_cartella:hover{
+    background-color: red;
+    height: 2.9rem;
+    width: 200px;
+}
+
+.celle_tabellone, .celle_cartelle{
+    display: inline-block;
+    border: 1px solid black;
+    width: 1rem;
+    height: 1rem;
+    text-align: center;
+    padding: 2%;
+    box-shadow: 2px 3px 10px black;
+}
+h4{
+    margin: 0;
+}
+
+.celle_tabellone_estratte{
+    background-color: red;
+}
+
+.cartelle{
+    width: 40%;
+    margin: 0 auto;
+    margin-bottom: 50px;
+}
+
+#input_field{
+    width: 60px;
+    height: 60px;
+    margin-right: 20px;
+    font-size: 24px;
+    box-shadow: 2px 3px 10px black;
+    font-weight: 600;
+}
+

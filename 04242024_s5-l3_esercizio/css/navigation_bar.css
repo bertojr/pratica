@@ -1,0 +1,20 @@
+.nav_bar{
+    background-color: #FAF7E3;
+    width: 800px;
+    padding: 3em 0;
+    border-radius: 60px;
+}
+.nav_bar ul{
+    display: flex;
+    margin: 0;
+    padding: 0;
+    justify-content: space-around;
+}
+.nav_bar ul li{
+    background-color: #F3DF85;
+    list-style: none;
+    flex-basis: 100px;
+    text-align: center;
+    padding: 1em 0;
+    border-radius: 60px;
+}

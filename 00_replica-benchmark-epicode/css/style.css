@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Outfit:wght@100..900&display=swap');
+
+
+body{
+    background-image: url(../img/bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    color: white;
+    font-family: "Inter", sans-serif;
+    font-size: 16px;
+}
+h1{
+    font-size: 60px;
+    line-height: 3rem;
+    font-weight: 250;
+    font-family: "Outfit", sans-serif;
+}
+span{
+    font-weight: bold;
+}
+.container{
+    padding: 5% 6%;
+}
+#logo{
+    width: 15%;
+    margin-bottom: 5rem;
+}
+.btn{
+    width: 19%;
+    height: 4rem;
+    font-weight: bold;
+    font-size: 26px;
+    background-color:  #00ffff;
+    box-shadow: 3px 3px 35px #00ffff;
+    border: none;
+    cursor: pointer;
+}
+.main_central{
+    text-align: center;
+    margin-top: 150px;
+}
+
+
+/* PAGINA WELCOME */
+#welcome h3{
+    color: #D20094;
+    font-size: 32px;
+    font-weight: bold;
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+}
+#welcome p{
+    margin-bottom: 3rem;
+    line-height: 1.2rem;
+    width: 60%;
+}
+#welcome ul{
+    margin-left: 2rem;
+    width: 70%;
+}
+#welcome ul li{
+    margin-bottom: 0.5rem;
+}
+#welcome form{
+    margin-top: 9rem;
+}
+#welcome form input{
+    cursor: pointer;
+    width: 1rem;
+    height: 1rem;
+    vertical-align: middle;
+}
+#welcome form label{
+    margin-left: 0.3rem;
+    vertical-align: middle;
+}
+#btn_procedi{
+    float: right;
+}
+
+/* PAGINA DEL TEST */
+#container_timer{
+    float: right;
+    width: 20%;
+    height: 20%;
+}
+#base_timer_svg{
+    width: 100%;
+    height: 100%;
+}
+#base_timer_circle{
+    fill: none;
+    stroke-width: 13px;
+    stroke: #00ffff;
+}
+#secondi_rimanenti{
+    font-size: 60px;
+    fill: white;
+}
+
+
+/* PAGINA RESULTS */
+#container_grafico{
+    position: relative;
+    border: 1px solid black;
+    width: 100%;
+    height: 700px;
+}
+#grafico{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+#testo_sinistra{
+    position: absolute;
+    bottom: 50%;
+}
+#testo_destro{
+    position: absolute;
+    right: 0;
+    bottom: 50%;
+}
+#testo_centrale{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}

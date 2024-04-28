@@ -1,0 +1,194 @@
+/* IMPOSTAZIONI GENERALI */
+body{
+    font-family: Poppins, 'Helvetica Neue', sans-serif;
+    font-size: 1.3rem;
+    line-height: 1.5;
+    padding: 15px;
+    background-image: url(../img/sfondo.png);
+    background-position: center center;
+}
+h1{
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+header, main, footer{
+    box-shadow: 5px 10px 20px black;
+}
+
+/* HEADER */
+header{
+    text-align: center;
+    color: white;
+    background-color: rgb(0,160,198);
+    text-transform: uppercase;
+    font-size: 1rem;
+    font-weight: bold;
+    background: linear-gradient(152deg, rgba(0,160,198,1) 0%, rgba(0,101,167,1) 100%);
+}
+header div{
+    padding: 2rem;
+}
+header div img{
+    width: 90%;
+    margin-bottom: 2rem;
+}
+nav{
+    padding-bottom: 2rem;
+}
+nav a{
+    text-decoration: none;
+    color: white;
+}
+.sx{
+    margin-right: 0.3rem;
+}
+.dx{
+    margin-left: 0.3rem;
+}
+
+
+/* MAIN */
+main{
+    background-color: white;
+    margin: 1em 0 1em 0;
+    padding: 1.6em 0.8em 1.6em 0.8em;
+}
+.paragrafo{
+    margin-top: 1.4rem;
+}
+
+
+/* ELEMENTI NEL MAIN - ARTICLE */
+#sottotitolo{
+    font-size: 0.8em;
+    color: rgb(181, 181, 181);
+    margin-top: 0.7em;
+}
+main span{
+    font-weight: bold;
+    color: rgb(255, 18, 255);
+}
+.elenco{
+    padding-left: 2.4rem;
+}
+.list_ul{
+    list-style-type: disc;
+}
+.list_ol{
+    list-style-type: decimal;
+}
+code{
+    border: 1px solid grey;
+    border-radius: 10px;
+    background-color: rgba(235, 233, 233, 0.842);
+}
+#tool{
+    color: rgb(4, 192, 192);
+    font-weight: bold;
+}
+#video_ext{
+    margin-top: 1em;
+}
+iframe{
+    width: 100%;
+    height: 190px;
+    border-radius: 30px;
+    box-shadow: 5px 10px 10px black;
+}
+#novita, .corr{
+    background-color: rgba(189, 188, 188, 0.71);
+}
+#novita{
+    text-align: center;
+    padding: 18px 15px 15px 15px;
+}
+#novita h1{
+    text-transform: uppercase;
+}
+#novita div{
+    text-align: justify;
+    margin-top: 20px;
+}
+#iscrizione{
+    margin-top: 13px;
+}
+#iscrizione input{
+    height: 1.7em;
+    width: 220px;
+}
+button{
+    height: 1.7rem;
+    width: 70px;
+    background-color: blue;
+    color: white;
+    font-size: 0.8em;
+}
+::placeholder{
+    font-size: 15px;
+}
+
+/* TABELLE */
+table{
+    border-bottom: 2px solid rgb(49, 49, 255);
+}
+caption{
+    font-weight: bold;
+}
+thead{
+    background-color: rgb(49, 49, 255);
+    color: white;
+    height: 100px;
+}
+.grey{
+    background-color: rgba(222, 222, 222, 0.52);
+    border-top: 1px solid rgb(155, 154, 154);
+    border-bottom: 1px solid rgb(155, 154, 154);
+}
+
+
+/* FORM */
+
+/* ELEMENTI NELL' ASIDE */
+#h1_corr{
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+}
+.corr{
+    padding: 12px;
+    font-size: 1rem;
+    border: 2px solid rgb(155, 154, 154);
+    margin-bottom: 12px;
+    box-shadow: 5px 10px 10px rgb(155, 154, 154);
+    
+}
+.corr a{
+    color: rgb(0,160,198);
+    font-weight: bold;
+}
+.date{
+    text-align: right;
+    font-size: 0.8rem;
+    margin-top: 15px;
+}
+
+
+/* FOOTER */
+footer{
+    text-align: center;
+    font-size: 0.7em;
+    line-height: normal;
+    padding: 1em 1em 2em 1em;
+    background-color: rgb(11, 95, 126);
+    color: white;
+    background: linear-gradient(rgba(11,95,126,1) 60%, rgba(3,11,14,1) 100%);
+}
+#principale{
+    margin-bottom: 1.5em;
+}
+footer a{
+    color: rgb(255, 18, 255);
+    font-weight: bold;
+}
+

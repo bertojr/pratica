@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Epicode</title>
+  </head>
+  <body>
+    <div class="container">
+      <img id="logo" src="./img/epicode_logo.png" alt="Logo Epicode">
+      <main id="welcome">
+        <h1>Benvenuto al <br/><span>tuo esame</span></h1>
+        <h3>Istruzioni</h3>
+        <p>
+          Non ci aspettiamo che la maggior parte degli ignegneri conosca
+          le risposte a tutte queste domande, quindi non preoccupatevi se non
+          siete sicuri di alcuni di queste
+        </p>
+        <ul>
+            <li>Ogni domanda è <span>cronometrata</span> e può essere risolta solo <span>una volta.</span></li>
+            <li>Cambiare la scheda del browser o aprire altre finestre <span>invaliderà la domanda.</span></li>
+            <li>Questo esame dura ca. <span>0-5 minuti.</span></li>
+        </ul>
+        <form action="exam_02_test.html">
+          <input type="checkbox" required>
+          <label name="checkbox">Prometto di rispondere senza l'aiuto di nessuno</label>
+          <button class="btn" id="btn_procedi" type="submit">PROCEDI</button>
+        </form>
+      </main>
+    </div>
+  </body>
+</html>
