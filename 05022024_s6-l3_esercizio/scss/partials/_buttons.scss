@@ -1,0 +1,5 @@
+@each $class-name, $color in $buttons-color {
+  .#{$class-name} {
+    background-color: $color;
+  }
+}

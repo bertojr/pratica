@@ -1,0 +1,163 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  padding: 0;
+  font-size: 1em;
+}
+
+body {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+.padding-block-xs {
+  padding: 2px;
+  display: block;
+}
+
+.padding-block-normal {
+  padding: 5px;
+  display: block;
+}
+
+.padding-block-md {
+  padding: 10px;
+  display: block;
+}
+
+.padding-block-lg {
+  padding: 15px;
+  display: block;
+}
+
+.padding-block-xl {
+  padding: 25px;
+  display: block;
+}
+
+.padding-block-xxl {
+  padding: 32px;
+  display: block;
+}
+
+.padding-inline-xs {
+  padding: 2px;
+  display: inline;
+}
+
+.padding-inline-normal {
+  padding: 5px;
+  display: inline;
+}
+
+.padding-inline-md {
+  padding: 10px;
+  display: inline;
+}
+
+.padding-inline-lg {
+  padding: 15px;
+  display: inline;
+}
+
+.padding-inline-xl {
+  padding: 25px;
+  display: inline;
+}
+
+.padding-inline-xxl {
+  padding: 32px;
+  display: inline;
+}
+
+.margin-block-xs {
+  padding: 0px;
+  display: block;
+}
+
+.margin-block-normal {
+  padding: 2px;
+  display: block;
+}
+
+.margin-block-md {
+  padding: 4px;
+  display: block;
+}
+
+.margin-block-lg {
+  padding: 7px;
+  display: block;
+}
+
+.margin-block-xl {
+  padding: 12px;
+  display: block;
+}
+
+.margin-block-xxl {
+  padding: 19px;
+  display: block;
+}
+
+.margin-inline-xs {
+  padding: 0px;
+  display: inline;
+}
+
+.margin-inline-normal {
+  padding: 2px;
+  display: inline;
+}
+
+.margin-inline-md {
+  padding: 4px;
+  display: inline;
+}
+
+.margin-inline-lg {
+  padding: 7px;
+  display: inline;
+}
+
+.margin-inline-xl {
+  padding: 12px;
+  display: inline;
+}
+
+.margin-inline-xxl {
+  padding: 19px;
+  display: inline;
+}
+
+.blue {
+  background-color: #0e6cff;
+}
+
+.orange {
+  background-color: #ff8700;
+}
+
+.green {
+  background-color: #4caf50;
+}/*# sourceMappingURL=style.css.map */

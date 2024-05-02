@@ -1,0 +1,11 @@
+@mixin littleBig {
+  font-size: $h1-size;
+  font-weight: 700;
+  color: darkmagenta;
+}
+
+@mixin floating($border: 1px solid black, $box-shadow: 5px 10px 20px grey) {
+  border: $border;
+  border-radius: 20px;
+  box-shadow: $box-shadow;
+}
