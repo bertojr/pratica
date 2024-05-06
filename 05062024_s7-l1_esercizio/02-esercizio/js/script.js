@@ -19,7 +19,8 @@ class Animale {
 
   confrontoAnimali(nuovoAnimale) {
     return animali.some(
-      (animale) => animale.propietario === nuovoAnimale.propietario
+      (animale) =>
+        animale !== this && animale.propietario === nuovoAnimale.propietario
     );
   }
 }
