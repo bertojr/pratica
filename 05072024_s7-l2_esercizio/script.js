@@ -25,8 +25,8 @@ const contatoreSessione = function () {
     const startTime = parseInt(sessionStorage.getItem("start-time"));
     const currentTime = Date.now();
     const differenza = currentTime - startTime;
-    const contatoreS = differenza / 1000;
-    contatoreTagHtml.innerHTML = Math.floor(contatoreS);
+    const contatoreSec = differenza / 1000;
+    contatoreTagHtml.innerHTML = Math.floor(contatoreSec);
   }, 1000);
 };
 
