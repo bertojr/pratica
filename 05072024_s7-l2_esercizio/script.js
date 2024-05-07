@@ -16,7 +16,18 @@ const aggiornaHtml = function () {
   nomeHtml.innerHTML = nomeSalvatoInLocalStorage;
 };
 const contatoreSessione = function () {
-  i++;
+  let i = 1;
+  if (!sessionStorage.getItem("start-time")) {
+    sessionStorage.setItem("start-time", Date.now());
+  }
+  const contatoreTagHtml = document.getElementsByTagName("h1")[0];
+  setInterval(function () {
+    const startTime = parseInt(sessionStorage.getItem("start-time"));
+    const currentTime = Date.now();
+    const differenza = currentTime - startTime;
+    const contatoreS = differenza / 1000;
+    contatoreTagHtml.innerHTML = Math.floor(contatoreS);
+  }, 1000);
 };
 
 const formTag = document.getElementsByTagName("form")[0];
@@ -36,4 +47,5 @@ btnRimuovi.addEventListener("click", rimuoviDaLocalStorage);
 
 window.onload = function () {
   aggiornaHtml();
+  contatoreSessione();
 };
