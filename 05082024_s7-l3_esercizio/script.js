@@ -29,7 +29,7 @@ const generaLibriHtml = function (libri) {
             <div class="card-body">
                 <h5 class="card-title">${libro.title}</h5>
                 <h6 class="card-text text-end py-3">Prezzo: ${libro.price} €</h6>
-                <a href="#" class="btn btn-danger">SCARTA</a>
+                <a href="#" class="btn btn-danger" onclick="rimuoviLibriHtml(this)">SCARTA</a>
             </div>
         </div>
         `;
@@ -37,6 +37,10 @@ const generaLibriHtml = function (libri) {
   });
 };
 
-const rimuoviLibriHtml = function () {};
+const rimuoviLibriHtml = function (elemento) {
+  const libroDaRimuovere = elemento.closest(".col");
+  console.log(libroDaRimuovere);
+  libroDaRimuovere.remove();
+};
 
 getLibri();
