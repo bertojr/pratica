@@ -44,24 +44,24 @@ console.log("Il tuo credito disponibile è di " + user1.chiama404() + " €");
 
 // chiamata numero 1
 user1.chiamata(25);
-console.log("Il tuo credito disponibile è di " + user1.chiama404() + " €");
 console.log(
   "Hai effettuato " + user1.getNumeroChiamata() + " minuti di chiamata"
 );
+console.log("Il tuo credito disponibile è di " + user1.chiama404() + " €");
 user1.azzeraChiamate();
 
 // chiamata numero 2
 user1.chiamata(25);
-console.log("Il tuo credito disponibile è di " + user1.chiama404() + " €");
 console.log(
   "Hai effettuato " + user1.getNumeroChiamata() + " minuti di chiamata"
 );
+console.log("Il tuo credito disponibile è di " + user1.chiama404() + " €");
 user1.azzeraChiamate();
 
 // chiamata numero 3
 user1.chiamata(10);
-console.log("Il tuo credito disponibile è di " + user1.chiama404() + " €");
 console.log(
   "Hai effettuato " + user1.getNumeroChiamata() + " minuti di chiamata"
 );
+console.log("Il tuo credito disponibile è di " + user1.chiama404() + " €");
 user1.azzeraChiamate();
