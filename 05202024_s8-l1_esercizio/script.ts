@@ -1,9 +1,9 @@
-interface Smartphone {
+interface iSmartPhone {
   credito: number;
   numeroChiamate: number;
 }
 
-class User implements Smartphone {
+class User implements iSmartPhone {
   nome: string;
   cognome: string;
   credito: number;
