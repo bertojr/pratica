@@ -19,6 +19,7 @@ export class HomeComponent {
       })
       .then((response) => {
         this.postArr = response.posts;
+
         console.log(this.postArr);
         this.postsRandom();
       });
