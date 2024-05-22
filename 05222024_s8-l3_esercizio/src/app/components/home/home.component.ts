@@ -31,6 +31,7 @@ export class HomeComponent {
     }*/
     for (let i = 0; i < 4; i++) {
       const randomIndex = Math.floor(Math.random() * this.postArr.length);
+
       this.fourPostsRandom.push(this.postArr[randomIndex]);
     }
     console.log(this.fourPostsRandom);
