@@ -23,4 +23,8 @@ export class PostsService {
   getPostInactive() {
     return this.postsArr.filter((post) => !post.active);
   }
+
+  getPostById(id: number) {
+    return this.postsArr.find((post) => post.id == id);
+  }
 }
