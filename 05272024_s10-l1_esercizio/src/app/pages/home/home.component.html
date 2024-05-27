@@ -46,12 +46,15 @@
 
 <h2 class="text-center">Tutti i post</h2>
 <div class="row row-cols-2">
-  <div class="col mb-5" *ngFor="let post of postsArr">
-    <div class="card h-100">
+  <div class="col mb-5 d-flex" *ngFor="let post of postsArr; let i = index">
+    <div class="card h-100" [ngClass]="{ 'bg-info': post.active }">
       <div class="card-body">
         <h5 class="card-title">{{ post.title }}</h5>
         <p class="card-text">
           {{ post.body }}
+        </p>
+        <p class="card-text">
+          Status: {{ post.active ? "Attivo" : "Inattivo" }}
         </p>
         <div class="d-flex justify-content-between">
           <a
@@ -60,20 +63,27 @@
             class="btn btn-primary"
             >Vai al post</a
           >
-          <a class="btn btn-primary">Modifica</a>
+          <a (click)="formVisible = !formVisible" class="btn btn-primary">{{
+            formVisible ? "Chiudi" : "Apri per modificare"
+          }}</a>
         </div>
       </div>
-      <div class="mb-3">
+      <div class="mb-3 w-75" [ngClass]="{ 'd-none': !formVisible }">
         <label for="title" class="form-label">Titolo</label>
-        <input class="form-control" name="title" id="title" />
+        <input
+          [(ngModel)]="post.title"
+          class="form-control"
+          name="title"
+          id="title"
+        />
         <label for="description" class="form-label">Descrizione</label>
         <textarea
+          [(ngModel)]="post.body"
           class="form-control"
           name="description"
           id="description"
-          rows="3"
+          rows="5"
         ></textarea>
-        <button class="btn btn-primary">Conferma modifiche</button>
       </div>
     </div>
   </div>

@@ -10,6 +10,7 @@ import { iPost } from '../../models/post';
 export class HomeComponent {
   postsArr: iPost[] = [];
   fourPostsRandom: iPost[] = [];
+  formVisible: boolean = false;
   constructor(private postsSvc: PostsService) {}
 
   ngOnInit() {
