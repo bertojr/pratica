@@ -26,4 +26,8 @@ export class HomeComponent {
     }
     console.log(this.fourPostsRandom);
   }
+
+  toggleForm() {
+    this.formVisible = !this.formVisible;
+  }
 }
