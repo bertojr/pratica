@@ -9,7 +9,7 @@ import { iPost } from '../../models/post';
 })
 export class FilteredPostsComponent {
   tagsArr: string[] = [];
-  selectedTag: string = '';
+  selectedTag: string | null = '';
   postsArrByTag: iPost[] = [];
 
   constructor(private postSvc: PostsService) {}
@@ -19,10 +19,10 @@ export class FilteredPostsComponent {
     console.log(this.tagsArr);
 
     const postsArrByTagString = localStorage.getItem('postsArrByTag');
+
     if (postsArrByTagString !== null) {
       console.log('local', JSON.parse(postsArrByTagString));
       this.postsArrByTag = JSON.parse(postsArrByTagString);
-      this.selectedTag = localStorage.getItem('selectedTag');
     }
   }
 
@@ -36,6 +36,7 @@ export class FilteredPostsComponent {
   }
 
   isTagSelected(tag: string): boolean {
+    this.selectedTag = localStorage.getItem('selectedTag');
     return this.selectedTag === tag;
   }
 }
