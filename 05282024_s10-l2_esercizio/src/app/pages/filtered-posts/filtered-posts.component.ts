@@ -9,20 +9,28 @@ import { iPost } from '../../models/post';
 })
 export class FilteredPostsComponent {
   tagsArr: string[] = [];
-  selectedTag: string | null = null;
+  selectedTag: string = '';
   postsArrByTag: iPost[] = [];
-  selected: boolean = false;
 
   constructor(private postSvc: PostsService) {}
 
   ngOnInit() {
     this.tagsArr = this.postSvc.getTagsPost();
     console.log(this.tagsArr);
+
+    const postsArrByTagString = localStorage.getItem('postsArrByTag');
+    if (postsArrByTagString !== null) {
+      console.log('local', JSON.parse(postsArrByTagString));
+      this.postsArrByTag = JSON.parse(postsArrByTagString);
+      this.selectedTag = localStorage.getItem('selectedTag');
+    }
   }
 
   getPostByTag(tag: string) {
     this.selectedTag = tag;
     this.postsArrByTag = this.postSvc.getPostByTag(tag);
+    localStorage.setItem('postsArrByTag', JSON.stringify(this.postsArrByTag));
+    localStorage.setItem('selectedTag', this.selectedTag);
     console.log(this.postsArrByTag);
     console.log(this.selectedTag);
   }
