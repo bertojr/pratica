@@ -9,7 +9,10 @@ import { iPost } from '../../models/post';
 })
 export class FilteredPostsComponent {
   tagsArr: string[] = [];
+  selectedTag: string | null = null;
   postsArrByTag: iPost[] = [];
+  selected: boolean = false;
+
   constructor(private postSvc: PostsService) {}
 
   ngOnInit() {
@@ -18,7 +21,13 @@ export class FilteredPostsComponent {
   }
 
   getPostByTag(tag: string) {
+    this.selectedTag = tag;
     this.postsArrByTag = this.postSvc.getPostByTag(tag);
     console.log(this.postsArrByTag);
+    console.log(this.selectedTag);
+  }
+
+  isTagSelected(tag: string): boolean {
+    return this.selectedTag === tag;
   }
 }
