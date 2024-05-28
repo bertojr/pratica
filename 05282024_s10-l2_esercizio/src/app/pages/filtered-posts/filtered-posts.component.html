@@ -3,8 +3,9 @@
     <span class="mr-2 font-weight-bold">FILTER BY:</span>
     <div class="btn-group" role="group" aria-label="Filter Buttons">
       <button
+        appColorTag
         type="button"
-        class="btn btn-secondary me-4 rounded-2"
+        class="btn text-white me-4 rounded-2"
         (click)="getPostByTag(tag)"
         *ngFor="let tag of tagsArr"
       >
