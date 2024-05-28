@@ -260,4 +260,12 @@ export class PostsService {
   getPostById(id: number) {
     return this.postsArr.find((post) => post.id == id);
   }
+
+  getTagsPost() {
+    return [...new Set(this.postsArr.map((post) => post.tags).flat())];
+  }
+
+  getPostByTag(tag: string) {
+    return this.postsArr.filter((post) => post.tags.includes(tag));
+  }
 }

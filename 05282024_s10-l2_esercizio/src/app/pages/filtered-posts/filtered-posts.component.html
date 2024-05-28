@@ -1,0 +1,15 @@
+<div class="container mt-3">
+  <div class="d-flex align-items-center">
+    <span class="mr-2 font-weight-bold">FILTER BY:</span>
+    <div class="btn-group" role="group" aria-label="Filter Buttons">
+      <button
+        type="button"
+        class="btn btn-secondary me-4 rounded-2"
+        (click)="getPostByTag(tag)"
+        *ngFor="let tag of tagsArr"
+      >
+        {{ tag | uppercase }}
+      </button>
+    </div>
+  </div>
+</div>

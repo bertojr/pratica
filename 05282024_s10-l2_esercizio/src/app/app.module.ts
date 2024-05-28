@@ -10,6 +10,8 @@ import { ActivePostsComponent } from './pages/active-posts/active-posts.componen
 import { InactivePostsComponent } from './pages/inactive-posts/inactive-posts.component';
 import { PostDetailComponent } from './pages/post-detail/post-detail.component';
 import { FormControl, FormsModule } from '@angular/forms';
+import { FilteredPostsComponent } from './pages/filtered-posts/filtered-posts.component';
+import { ColorTagDirective } from './color-tag.directive';
 
 @NgModule({
   declarations: [
@@ -20,6 +22,8 @@ import { FormControl, FormsModule } from '@angular/forms';
     ActivePostsComponent,
     InactivePostsComponent,
     PostDetailComponent,
+    FilteredPostsComponent,
+    ColorTagDirective,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [],
