@@ -38,8 +38,10 @@ export class HomeComponent {
   }
 
   addToCard(product: iProduct) {
+    this.productSvc.addToCart(product);
+    /*
     this.cardArr.push(product);
     localStorage.setItem('productsCard', JSON.stringify(this.cardArr));
-    console.log('Prodotto aggiunto al carrello', this.cardArr);
+    console.log('Prodotto aggiunto al carrello', this.cardArr);*/
   }
 }

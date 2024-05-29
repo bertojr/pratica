@@ -29,6 +29,22 @@
             >Preferiti</a
           >
         </li>
+        <li class="nav-item dropdown" (click)="show = !show">
+          <a
+            class="nav-link dropdown-toggle"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            Carrello
+          </a>
+          <ul class="dropdown-menu" [ngClass]="{ show: show }">
+            <li *ngFor="let product of cardArr">
+              {{ product.title }}
+              <button (click)="removeFromCard(product, $event)">x</button>
+            </li>
+          </ul>
+        </li>
       </ul>
     </div>
   </div>
