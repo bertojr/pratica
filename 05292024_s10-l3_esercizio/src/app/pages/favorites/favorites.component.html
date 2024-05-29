@@ -1,1 +1,29 @@
-<p>favorites works!</p>
+<div class="row">
+  <h1 class="text-center">I tuoi prodotti preferiti</h1>
+  <div
+    class="col-12 col-md-4 col-lg-3"
+    *ngFor="let productFavorite of productsFavoritesArr"
+  >
+    <div class="card h-100">
+      <img
+        class="card-img-top"
+        [src]="[productFavorite.thumbnail]"
+        alt="Title"
+      />
+      <div class="card-body">
+        <h4 class="card-title">{{ productFavorite.title }}</h4>
+        <div class="d-flex">
+          <button class="btn btn-primary" (click)="addToCard(productFavorite)">
+            Aggiungi al carrello
+          </button>
+          <button
+            class="btn btn-warning"
+            (click)="removeToFavorites(productFavorite)"
+          >
+            Rimuovi dai preferiti
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

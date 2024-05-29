@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { iJsonContent } from './models/json-content';
 import { Observable } from 'rxjs';
+import { iProduct } from './models/product';
 
 @Injectable({
   providedIn: 'root',

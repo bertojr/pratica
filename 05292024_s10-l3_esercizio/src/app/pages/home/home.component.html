@@ -6,8 +6,12 @@
       <div class="card-body">
         <h4 class="card-title">{{ product.title }}</h4>
         <div class="d-flex">
-          <button class="btn btn-primary">Add to card</button>
-          <button class="btn btn-warning">Aggiungi ai preferiti</button>
+          <button class="btn btn-primary" (click)="addToCard(product)">
+            Add to card
+          </button>
+          <button class="btn btn-warning" (click)="addToFavorites(product)">
+            Aggiungi ai preferiti
+          </button>
         </div>
       </div>
     </div>
