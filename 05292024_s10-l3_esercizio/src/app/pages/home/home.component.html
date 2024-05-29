@@ -1,1 +1,15 @@
-<p>home works!</p>
+<div class="row">
+  <h1 class="text-center">Tutti i prodotti</h1>
+  <div class="col-12 col-md-4 col-lg-3" *ngFor="let product of productsArr">
+    <div class="card h-100">
+      <img class="card-img-top" [src]="[product.thumbnail]" alt="Title" />
+      <div class="card-body">
+        <h4 class="card-title">{{ product.title }}</h4>
+        <div class="d-flex">
+          <button class="btn btn-primary">Add to card</button>
+          <button class="btn btn-warning">Aggiungi ai preferiti</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
