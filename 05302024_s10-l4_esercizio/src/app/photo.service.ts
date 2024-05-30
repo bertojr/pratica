@@ -10,6 +10,7 @@ export class PhotoService {
   apiUrl: string = 'https://jsonplaceholder.typicode.com/photos';
   favoritesSubject = new Subject<iPhoto>();
   favorites$ = this.favoritesSubject.asObservable();
+  countFavorites: number = 0;
 
   constructor(private http: HttpClient) {}
 

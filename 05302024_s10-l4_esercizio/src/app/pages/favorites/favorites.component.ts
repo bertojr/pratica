@@ -14,7 +14,7 @@ export class FavoritesComponent {
   ngOnInit() {
     this.photoSvc.favorites$.subscribe((favorite) => {
       this.photosFavoritesArr.push(favorite);
-      console.log(this.photosFavoritesArr);
+      console.log(favorite);
     });
   }
 
