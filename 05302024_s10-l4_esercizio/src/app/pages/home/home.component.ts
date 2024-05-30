@@ -14,17 +14,23 @@ export class HomeComponent {
   constructor(private photoService: PhotoService) {}
 
   ngOnInit() {
-    this.photoService.getPhotos().subscribe((photo) => {
-      this.photosArr = photo;
+    this.photoService.getPhotos().subscribe((photos) => {
+      this.photosArr = photos;
+    });
+
+    this.photoService.favorites$.subscribe((likeCount) => {
+      this.countFavorites = likeCount;
     });
   }
 
   delete(id: number) {
-    this.photosArr = this.photosArr.filter((photo) => photo.id !== id);
+    this.photoService.delete(id).subscribe(() => {
+      this.photosArr = this.photosArr.filter((photo) => photo.id !== id);
+      console.log('Foto eliminata');
+    });
   }
 
-  addToFavorites(photo: iPhoto) {
-    this.photoService.addToFavorites(photo);
-    this.countFavorites++;
+  addToFavorites() {
+    this.photoService.addToFavorites();
   }
 }

@@ -11,6 +11,7 @@ export class FavoritesComponent {
   photosFavoritesArr: iPhoto[] = [];
   constructor(private photoSvc: PhotoService) {}
 
+  /*
   ngOnInit() {
     this.photoSvc.favorites$.subscribe((favorite) => {
       this.photosFavoritesArr.push(favorite);
@@ -22,5 +23,5 @@ export class FavoritesComponent {
     this.photosFavoritesArr = this.photosFavoritesArr.filter(
       (photo) => photo.id !== id
     );
-  }
+  }*/
 }
