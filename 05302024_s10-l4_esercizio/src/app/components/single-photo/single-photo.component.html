@@ -1,1 +1,10 @@
-<p>single-photo works!</p>
+<div class="card h-100">
+  <img class="card-img-top" [src]="[photo.thumbnailUrl]" alt="Title" />
+  <div class="card-body">
+    <h4 class="card-title">{{ photo.title }}</h4>
+    <div class="d-flex justify-content-between">
+      <button class="btn btn-success">Mi piace</button>
+      <button class="btn btn-danger" (click)="delete(photo.id)">Elimina</button>
+    </div>
+  </div>
+</div>

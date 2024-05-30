@@ -8,6 +8,7 @@ import { SinglePhotoComponent } from './components/single-photo/single-photo.com
 import { HomeComponent } from './pages/home/home.component';
 import { HeaderComponent } from './main-components/header/header.component';
 import { FavoritesComponent } from './pages/favorites/favorites.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -15,14 +16,10 @@ import { FavoritesComponent } from './pages/favorites/favorites.component';
     SinglePhotoComponent,
     HomeComponent,
     HeaderComponent,
-    FavoritesComponent
+    FavoritesComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    NgbModule
-  ],
+  imports: [BrowserModule, AppRoutingModule, NgbModule, HttpClientModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
