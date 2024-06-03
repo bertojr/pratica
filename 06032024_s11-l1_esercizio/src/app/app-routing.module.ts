@@ -9,24 +9,37 @@ import { FilteredPostsComponent } from './pages/filtered-posts/filtered-posts.co
 const routes: Routes = [
   {
     path: '',
-    component: HomeComponent,
+    loadChildren: () =>
+      import('./pages/home/home.module').then((m) => m.HomeModule),
     pathMatch: 'full',
   },
   {
     path: 'active-posts',
-    component: ActivePostsComponent,
+    loadChildren: () =>
+      import('./pages/active-posts/active-posts.module').then(
+        (m) => m.ActivePostsModule
+      ),
   },
   {
     path: 'inactive-posts',
-    component: InactivePostsComponent,
+    loadChildren: () =>
+      import('./pages/inactive-posts/inactive-posts.module').then(
+        (m) => m.InactivePostsModule
+      ),
   },
   {
     path: 'post-detail/:id',
-    component: PostDetailComponent,
+    loadChildren: () =>
+      import('./pages/post-detail/post-detail.module').then(
+        (m) => m.PostDetailModule
+      ),
   },
   {
     path: 'filtered-posts',
-    component: FilteredPostsComponent,
+    loadChildren: () =>
+      import('./pages/filtered-posts/filtered-posts.module').then(
+        (m) => m.FilteredPostsModule
+      ),
   },
 ];
 
