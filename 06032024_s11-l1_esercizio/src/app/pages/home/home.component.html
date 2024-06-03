@@ -1,20 +1,7 @@
 <h2 class="text-center">Post in evidenzia</h2>
 <div class="row justify-content-center">
   <div class="col-8" *ngIf="postsArr.length > 0">
-    <div class="card">
-      <div class="card-body">
-        <h5 class="card-title">{{ postsArr[1].title }}</h5>
-        <p class="card-text">
-          {{ postsArr[1].body }}
-        </p>
-        <a
-          [routerLink]="['/post-detail', postsArr[1].id]"
-          routerLinkActive="router-link-active"
-          class="btn btn-primary"
-          >Vai al post</a
-        >
-      </div>
-    </div>
+    <app-single-post [post]="postsArr[1]"></app-single-post>
   </div>
 </div>
 <hr />
@@ -24,67 +11,15 @@
 <h2 class="text-center">Potrebbero piacerti</h2>
 <div class="row row-cols-2">
   <div class="col mb-5" *ngFor="let post of fourPostsRandom">
-    <div class="card h-100">
-      <div class="card-body">
-        <h5 class="card-title">{{ post.title }}</h5>
-        <p class="card-text">
-          {{ post.body }}
-        </p>
-        <a
-          [routerLink]="['/post-detail', post.id]"
-          routerLinkActive="router-link-active"
-          class="btn btn-primary"
-          >Vai al post</a
-        >
-      </div>
-    </div>
+    <app-single-post [post]="post"></app-single-post>
   </div>
 </div>
 <hr />
 <hr />
 <hr />
-
 <h2 class="text-center">Tutti i post</h2>
 <div class="row row-cols-2">
-  <div class="col mb-5 d-flex" *ngFor="let post of postsArr; let i = index">
-    <div class="card h-100" [ngClass]="{ 'bg-info': post.active }">
-      <div class="card-body">
-        <h5 class="card-title">{{ post.title }}</h5>
-        <p class="card-text">
-          {{ post.body }}
-        </p>
-        <p class="card-text">
-          Status: {{ post.active ? "Attivo" : "Inattivo" }}
-        </p>
-        <div class="d-flex justify-content-between">
-          <a
-            [routerLink]="['/post-detail', post.id]"
-            routerLinkActive="router-link-active"
-            class="btn btn-primary"
-            >Vai al post</a
-          >
-          <a (click)="toggleForm()" class="btn btn-primary">{{
-            !formVisible ? "Apri per modificare" : "Chiudi"
-          }}</a>
-        </div>
-      </div>
-      <div class="mb-3 w-75" [ngClass]="{ 'd-none': !formVisible }">
-        <label for="title" class="form-label">Titolo</label>
-        <input
-          [(ngModel)]="post.title"
-          class="form-control"
-          name="title"
-          id="title"
-        />
-        <label for="description" class="form-label">Descrizione</label>
-        <textarea
-          [(ngModel)]="post.body"
-          class="form-control"
-          name="description"
-          id="description"
-          rows="5"
-        ></textarea>
-      </div>
-    </div>
+  <div class="col mb-5 d-flex" *ngFor="let post of postsArr">
+    <app-single-post [post]="post"></app-single-post>
   </div>
 </div>

@@ -1,19 +1,6 @@
+<h2 class="text-center">Post inattivi</h2>
 <div class="row row-cols-2">
   <div class="col mb-5" *ngFor="let postInactive of postInactiveArr">
-    <div class="card h-100">
-      <div class="card-body">
-        <h5 class="card-title">{{ postInactive.title }}</h5>
-        <p class="card-text">
-          {{ postInactive.body }}
-        </p>
-        <p>Status: {{ postInactive.active ? "Attivo" : "Inattivo" }}</p>
-        <a
-          [routerLink]="['/post-detail', postInactive.id]"
-          routerLinkActive="router-link-active"
-          class="btn btn-primary"
-          >Vai al post</a
-        >
-      </div>
-    </div>
+    <app-single-post [post]="postInactive"></app-single-post>
   </div>
 </div>

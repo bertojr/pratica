@@ -20,21 +20,7 @@
   <h2 class="text-center">Post</h2>
   <div class="row row-cols-2">
     <div class="col mb-5" *ngFor="let postByTag of postsArrByTag">
-      <div class="card h-100">
-        <div class="card-body">
-          <h5 class="card-title">{{ postByTag.title }}</h5>
-          <p class="card-text">
-            {{ postByTag.body }}
-          </p>
-          <p class="card-text">Tag: {{ postByTag.tags }}</p>
-          <a
-            [routerLink]="['/post-detail', postByTag.id]"
-            routerLinkActive="router-link-active"
-            class="btn btn-primary"
-            >Vai al post</a
-          >
-        </div>
-      </div>
+      <app-single-post [post]="postByTag"></app-single-post>
     </div>
   </div>
 </div>

@@ -10,7 +10,6 @@ import { iPost } from '../../models/post';
 export class HomeComponent {
   postsArr: iPost[] = [];
   fourPostsRandom: iPost[] = [];
-  formVisible: boolean = false;
   constructor(private postsSvc: PostsService) {}
 
   ngOnInit() {
@@ -25,9 +24,5 @@ export class HomeComponent {
       this.fourPostsRandom.push(this.postsArr[randomIndex]);
     }
     console.log(this.fourPostsRandom);
-  }
-
-  toggleForm() {
-    this.formVisible = !this.formVisible;
   }
 }
