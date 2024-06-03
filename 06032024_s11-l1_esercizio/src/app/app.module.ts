@@ -7,6 +7,7 @@ import { FormsModule } from '@angular/forms';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { NavbarComponent } from './main-components/navbar/navbar.component';
 import { FooterComponent } from './main-components/footer/footer.component';
+import { ColorTagDirective } from './color-tag.directive';
 
 @NgModule({
   declarations: [AppComponent, NavbarComponent, FooterComponent],
