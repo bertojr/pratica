@@ -24,8 +24,9 @@ export class ReactiveFormComponent {
         password: this.fb.control(1234, [
           Validators.required,
           Validators.minLength(6),
-          this.prova(),
+          this.prova,
         ]),
+
         confermaPassword: this.fb.control(1234, [
           Validators.required,
           Validators.minLength(6),
@@ -46,6 +47,6 @@ export class ReactiveFormComponent {
   }
 
   prova(): ValidationErrors | null {
-    return { prova: true };
+    return { prova: false };
   }
 }
