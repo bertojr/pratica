@@ -1,1 +1,75 @@
-<p>reactive-form works!</p>
+<div class="row justify-content-center">
+  <div class="col-6">
+    <form [formGroup]="form" class="mb-3">
+      <label class="form-label">Nome</label>
+      <input
+        type="text"
+        formControlName="nome"
+        id=""
+        class="form-control"
+        placeholder="Inserisci il tuo nome"
+      />
+      <label class="form-label">Cognome</label>
+      <input
+        type="text"
+        formControlName="cognome"
+        id=""
+        class="form-control"
+        placeholder="Inserisci il tuo cognome"
+      />
+      <div formGroupName="authData">
+        <label class="form-label">Password</label>
+        <input
+          type="password"
+          formControlName="password"
+          id=""
+          class="form-control"
+          placeholder="Inserire la password"
+        />
+        <label class="form-label">Conferma password</label>
+        <input
+          type="password"
+          formControlName="confermaPassword"
+          id=""
+          class="form-control"
+          placeholder="Conferma la tua password"
+        />
+      </div>
+
+      <label class="form-label">Genere</label>
+      <select class="form-select form-select-lg" formControlName="genere" id="">
+        <option value="" selected>-- Seleziona genere --</option>
+        <option value="maschio">Maschio</option>
+        <option value="femmina">Femmina</option>
+        <option value="altro">Non specificato</option>
+      </select>
+      <label class="form-label">Immagine profilo</label>
+      <input type="file" formControlName="file" id="" class="form-control" />
+      <label class="form-label">Biografia</label>
+      <textarea
+        class="form-control"
+        formControlName="biografia"
+        id=""
+        rows="6"
+      ></textarea>
+      <div formGroupName="authData">
+        <label class="form-label">Username</label>
+        <input
+          type="text"
+          formControlName="username"
+          id=""
+          class="form-control"
+          placeholder="Inserisci la tua username"
+        />
+      </div>
+
+      <button
+        (click)="invia()"
+        [disabled]="!form.valid"
+        class="btn btn-primary"
+      >
+        {{ form.valid ? "Invia" : "Form non valido" }}
+      </button>
+    </form>
+  </div>
+</div>
