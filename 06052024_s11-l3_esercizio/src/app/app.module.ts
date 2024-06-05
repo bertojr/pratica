@@ -1,3 +1,4 @@
+import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -11,7 +12,13 @@ import { ColorTagDirective } from './direttive/color-tag.directive';
 
 @NgModule({
   declarations: [AppComponent, NavbarComponent, FooterComponent],
-  imports: [BrowserModule, AppRoutingModule, FormsModule, NgbModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    FormsModule,
+    NgbModule,
+    HttpClientModule,
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })

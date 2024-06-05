@@ -53,10 +53,18 @@
             >Filtra post</a
           >
         </li>
-        <li class="nav-item">
+        <li class="nav-item" *ngIf="!isLoggedIn">
           <a class="nav-link" routerLink="/auth" routerLinkActive="active"
             >Login</a
           >
+        </li>
+        <li class="nav-item" *ngIf="isLoggedIn">
+          <a class="nav-link" routerLink="/profile" routerLinkActive="active"
+            >Profilo</a
+          >
+        </li>
+        <li class="nav-item" *ngIf="isLoggedIn">
+          <button class="btn btn-danger" (click)="logout()">Logout</button>
         </li>
       </ul>
     </div>

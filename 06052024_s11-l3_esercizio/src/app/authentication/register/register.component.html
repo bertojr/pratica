@@ -2,23 +2,26 @@
 
 <form>
   <input
+    [(ngModel)]="newUser.nome"
     type="text"
     name="nome"
     placeholder="Il tuo nome"
     class="form-control"
   />
   <input
+    [(ngModel)]="newUser.email"
     type="email"
     name="email"
     placeholder="email"
     class="form-control mt-3"
   />
   <input
+    [(ngModel)]="newUser.password"
     type="password"
     name="password"
     placeholder="password"
     class="form-control mt-3"
   />
 
-  <button class="btn btn-primary mt-3">Registrati</button>
+  <button class="btn btn-primary mt-3" (click)="register()">Registrati</button>
 </form>

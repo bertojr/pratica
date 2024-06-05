@@ -1,3 +1,16 @@
 {
-  "users": []
+  "users": [
+    {
+      "email": "paulo@paulo.com",
+      "password": "$2a$10$Sc7LQr7MxZmk45kuxDpwJeUbbZN8Nk9obnxd6.TWJLstxvTxiUee6",
+      "nome": "Paulo",
+      "id": 1
+    },
+    {
+      "email": "dybala@dybala.com",
+      "password": "$2a$10$oy31qPHQlYVeT9rCIL7GLe9Xq8Kz8rhYtKXYb8wwD.J8sh2PRfJOe",
+      "nome": "Dybala",
+      "id": 2
+    }
+  ]
 }

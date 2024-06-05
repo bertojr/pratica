@@ -1,10 +1,17 @@
 import { Component } from '@angular/core';
+import { AuthenticationService } from '../authentication.service';
+import { iUser } from '../../models/user';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-register',
   templateUrl: './register.component.html',
-  styleUrl: './register.component.scss'
+  styleUrl: './register.component.scss',
 })
 export class RegisterComponent {
-
+  newUser: Partial<iUser> = {};
+  constructor(private authSvc: AuthenticationService, private router: Router) {}
+  register() {
+    this.authSvc.register(this.newUser).subscribe();
+  }
 }
