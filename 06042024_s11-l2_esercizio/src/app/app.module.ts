@@ -7,9 +7,10 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
 import { TemplateDrivenComponent } from './template-driven/template-driven.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { NavbarComponent } from './main-components/navbar/navbar.component';
 
 @NgModule({
-  declarations: [AppComponent, ReactiveFormComponent, TemplateDrivenComponent],
+  declarations: [AppComponent, ReactiveFormComponent, TemplateDrivenComponent, NavbarComponent],
   imports: [BrowserModule, AppRoutingModule, NgbModule, ReactiveFormsModule],
   providers: [],
   bootstrap: [AppComponent],
