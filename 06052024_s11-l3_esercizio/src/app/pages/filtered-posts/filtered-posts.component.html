@@ -1,0 +1,26 @@
+<div class="container mt-3">
+  <div class="d-flex align-items-center">
+    <span class="mr-2 font-weight-bold">FILTER BY:</span>
+    <div class="btn-group" role="group" aria-label="Filter Buttons">
+      <button
+        [ngClass]="{
+          'bg-success': isTagSelected(tag)
+        }"
+        appColorTag
+        type="button"
+        class="btn text-white me-4 rounded-2"
+        (click)="getPostByTag(tag)"
+        *ngFor="let tag of tagsArr"
+      >
+        {{ tag | uppercase }}
+      </button>
+    </div>
+  </div>
+  <hr />
+  <h2 class="text-center">Post</h2>
+  <div class="row row-cols-2">
+    <div class="col mb-5" *ngFor="let postByTag of postsArrByTag">
+      <app-single-post [post]="postByTag"></app-single-post>
+    </div>
+  </div>
+</div>

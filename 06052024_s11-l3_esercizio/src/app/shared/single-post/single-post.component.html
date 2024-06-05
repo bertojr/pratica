@@ -1,0 +1,38 @@
+<div class="card h-100" [ngClass]="{ 'bg-info': post.active }">
+  <div class="card-body">
+    <h5 class="card-title">{{ post.title }}</h5>
+    <p class="card-text">
+      {{ post.body }}
+    </p>
+    <p class="card-text">Status: {{ post.active ? "Attivo" : "Inattivo" }}</p>
+    <p class="card-text">Tag: {{ post.tags }}</p>
+    <div class="d-flex justify-content-between">
+      <a
+        [routerLink]="['/post-detail', post.id]"
+        routerLinkActive="router-link-active"
+        class="btn btn-primary"
+        >Vai al post</a
+      >
+      <a (click)="toggleForm()" class="btn btn-primary">{{
+        !formVisible ? "Apri per modificare" : "Chiudi"
+      }}</a>
+    </div>
+  </div>
+  <div class="mb-3 w-75" [ngClass]="{ 'd-none': !formVisible }">
+    <label for="title" class="form-label">Titolo</label>
+    <input
+      [(ngModel)]="post.title"
+      class="form-control"
+      name="title"
+      id="title"
+    />
+    <label for="description" class="form-label">Descrizione</label>
+    <textarea
+      [(ngModel)]="post.body"
+      class="form-control"
+      name="description"
+      id="description"
+      rows="5"
+    ></textarea>
+  </div>
+</div>

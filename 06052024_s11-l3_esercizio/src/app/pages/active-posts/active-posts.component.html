@@ -1,0 +1,6 @@
+<h2 class="text-center">Post attivi</h2>
+<div class="row row-cols-2">
+  <div class="col mb-5" *ngFor="let postActive of postActiveArr">
+    <app-single-post [post]="postActive"></app-single-post>
+  </div>
+</div>
