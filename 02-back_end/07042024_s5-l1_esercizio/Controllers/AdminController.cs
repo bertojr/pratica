@@ -23,16 +23,10 @@ namespace _07042024_s5_l1_esercizio.Controllers
         }
 
         [HttpPost]
-        public IActionResult CheckAzienda(bool isAzienda)
-        {
-            var model = new Cliente { IsAzienda = isAzienda};
-            return View("Create", model);
-        }
-        [HttpPost]
         public IActionResult Create(Cliente cliente)
         {
             _clienteService.Create(cliente);
-            return RedirectToAction(nameof(Index));
+            return RedirectToAction("Index", "Admin");
         }
     }
 }
