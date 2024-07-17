@@ -22,11 +22,25 @@ namespace _07042024_s5_l1_esercizio.Controllers
             return View(new Cliente());
         }
 
+        [HttpGet]
+        public IActionResult Clienti()
+        {
+            return View(_clienteService.GetAll());
+        }
+
+
         [HttpPost]
         public IActionResult Create(Cliente cliente)
         {
             _clienteService.Create(cliente);
-            return RedirectToAction("Index", "Admin");
+            return RedirectToAction("Clienti");
+        }
+
+        [HttpPost]
+        public IActionResult Delete(int id)
+        {
+            _clienteService.Delete(id);
+            return RedirectToAction("Clienti");
         }
     }
 }

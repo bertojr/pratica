@@ -8,5 +8,7 @@
         public string PartitaIVA { get; set; } // partita IVA
 
         public bool IsAzienda { get; set; }
+
+        public string TipoCliente { get; set; }
     }
 }

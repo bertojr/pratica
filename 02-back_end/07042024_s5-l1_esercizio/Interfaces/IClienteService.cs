@@ -4,6 +4,9 @@ namespace _07042024_s5_l1_esercizio.Interfaces
 {
     public interface IClienteService
     {
-        void Create(Cliente cliente);
+        Cliente Create(Cliente cliente);
+        Cliente Update(int clienteID, Cliente cliente);
+        List<Cliente> GetAll();
+        void Delete(int clienteID);
     }
 }
